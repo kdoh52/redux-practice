@@ -4,7 +4,7 @@
 // actions call reducers
 
 // import actions
-import { CREATE_TODO, REMOVE_TODO } from './actions'
+import { MARK_TODO_AS_COMPLETED, CREATE_TODO, REMOVE_TODO } from './actions'
 
 // current state of array/var AND action type & payload
 export const todos = (state = [], action) => {
@@ -26,6 +26,15 @@ export const todos = (state = [], action) => {
             const { text } = payload;
             // return state that filters out todos w/ matching text
             return state.filter(todo => todo.text !== text);
+        }
+        case MARK_TODO_AS_COMPLETED: {
+            const { text } = payload;
+            return state.map(todo => {
+                if (todo.text === text) {
+                    return {...todo, isCompleted: true}
+                }
+                return todo;
+            })
         }
         default: {
             // return state otherwise it will return as undefined
