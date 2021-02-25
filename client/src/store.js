@@ -1,3 +1,6 @@
+// STEP 4: create store w/ reducers
+// go to index.js
+
 import { createStore, combineReducers } from "redux";
 
 // import reducers

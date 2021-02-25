@@ -1,4 +1,7 @@
-// actions calls reducers
+// STEP 3: Create reducers for each action type, export
+// go to store.js
+
+// actions call reducers
 
 // import actions
 import { CREATE_TODO, REMOVE_TODO } from './actions'

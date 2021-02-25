@@ -35,12 +35,14 @@ const NewTodoForm = ({ todos, onCreatePressed }) => {
 };
 
 // maps through state of entire application to provide props needed
+// aka it allows access to the data in the store
 const mapStateToProps = state => ({
     // set todos as props
     todos: state.todos,
 });
 
 // dispatch triggers a redux action
+// aka it allows you to change the data in the store
 const mapDispatchToProps = dispatch => ({
     // set onCreatePressed as props
     onCreatePressed: text => dispatch(createTodo(text)),

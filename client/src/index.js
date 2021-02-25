@@ -4,6 +4,9 @@ import './index.css';
 import App from './App';
 // import reportWebVitals from './reportWebVitals';
 
+// STEP 5: Using configureStore from store.js, create provider that encompasses App component
+// go to individual components (connecting)
+
 // redux dependencies
 import { Provider } from "react-redux";
 import { configureStore } from "./store";
